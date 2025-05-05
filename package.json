@@ -5,15 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/project-15/",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
-    "glob": "^8.1.0",
+    "vercel": "^41.7.0",
     "vite": "^4.5.2"
   },
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
-  "license": "ISC",
   "dependencies": {
     "accordion-js": "^3.3.4",
     "animate.css": "^4.1.1",
@@ -22,8 +20,6 @@
     "izitoast": "^1.4.0",
     "normalize.css": "^8.0.1",
     "simplelightbox": "^2.14.3",
-    "swiper": "^11.1.3",
-    "vite-plugin-full-reload": "^1.0.5",
-    "vite-plugin-html-inject": "^1.0.1"
+    "swiper": "^11.1.3"
   }
 }
