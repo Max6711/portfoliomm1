@@ -59,10 +59,7 @@ h1 {
     border-radius: 10px;
 }
 
-.order-btn-container {
-    display: flex;
-    align-items: center;
-}
+
 
 .button-order {
     text-transform: uppercase;
@@ -170,10 +167,14 @@ h1 {
         background-image: url(../img/header-hero-background/decordesktop1.png);
         background-position: top center;
     }
-
     .hero-image {
-        display: flex;
+        display: block;
+        width: 500px; /* или например 40% */
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto; /* если хочешь по центру */
     }
+    
 
     h1 {
         padding-bottom: 0px;
