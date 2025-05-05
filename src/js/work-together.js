@@ -1,6 +1,4 @@
-import axios from 'axios';
-
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const form = document.querySelector('.form-work-togezer');
   const footerModal = document.querySelector('.footer-modal-background');
   const closeButton = document.querySelector('.footer-modal-btn');
@@ -25,14 +23,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  form.addEventListener('submit', async function(event) {
-    event.preventDefault();
-
+  form.addEventListener('submit', function (event) {
     const email = emailInput.value.trim();
     const message = messageInput.value.trim();
 
     if (!validateEmail(email)) {
       emailErrorMessage.style.display = 'block';
+      event.preventDefault();
       return;
     } else {
       emailErrorMessage.style.display = 'none';
@@ -40,34 +37,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (message === '') {
       messageErrorMessage.style.display = 'block';
+      event.preventDefault();
       return;
     } else {
       messageErrorMessage.style.display = 'none';
     }
 
-    try {
-      await axios.post('https://portfolio-js.b.goit.study/api/requests', {
-        email: email,
-        comment: message
-      });
+    // Дозволяємо стандартну відправку (formsubmit)
+    setTimeout(() => {
       footerModal.style.display = 'flex';
       toggleKeyboardListener(true);
-    } catch (error) {
-      alert('Произошла ошибка при отправке сообщения.');
-    }
-
-    form.reset();
+      form.reset();
+    }, 300);
   });
 
-  closeButton.addEventListener('click', function() {
+  closeButton.addEventListener('click', function () {
     footerModal.style.display = 'none';
-    toggleKeyboardListener(false); 
+    toggleKeyboardListener(false);
   });
 
-  footerModal.addEventListener('click', function(event) {
+  footerModal.addEventListener('click', function (event) {
     if (event.target === footerModal) {
       footerModal.style.display = 'none';
-      toggleKeyboardListener(false); 
+      toggleKeyboardListener(false);
     }
   });
 
@@ -75,10 +67,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
   }
-});
 
-const form = document.querySelector('.form-work-togezer');
-form.addEventListener('input', event => {  
-  event.currentTarget.elements.email.style.background = '#e4e5e6';  
-  event.currentTarget.elements.message.style.background = '#e4e5e6';  
+  form.addEventListener('input', event => {
+    emailInput.style.background = '#e4e5e6';
+    messageInput.style.background = '#e4e5e6';
+  });
 });
