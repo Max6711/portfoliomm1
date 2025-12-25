@@ -1,3 +1,5 @@
+import writeMateImg from '../img/my-projects/WRITEMATE-X2.jpg';
+import writeMateImg2x from '../img/my-projects/writemate.jpg';
 
 import managerFinanceImg from '../img/my-projects/qw.jpg';
 import managerFinanceImg2x from '../img/my-projects/qw-x2-min.jpg';
@@ -32,6 +34,16 @@ import turnYourImg2x from '../img/my-projects/turn-your-x2-min.jpg';
 import arrowIcon from '../img/symbol-defs.svg#icon-arrow';
 
 const projects = [
+    {
+        title: "WriteMate - AI Writing Assistant",
+        image: writeMateImg,
+        image2x: writeMateImg2x,
+        techStack: "Full-stack SaaS platform with React, Node.js microservices, OpenAI API integration, Google OAuth, Stripe payments, and production deployment.",
+        link: "https://writemate.space",
+        alt: "WriteMate AI Platform",
+        svg: arrowIcon
+    },
+
     {
         title: "House MarketPlace",
         image: managerFinanceImg,
