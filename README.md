@@ -32,7 +32,7 @@ npm run preview   # serve dist/ at http://localhost:4173
 
 ## Deploy
 
-The repo is connected to Vercel: every push to `main` builds and deploys to maximmakovskiy.com.
+The repo is connected to Vercel: every push to `main` builds and deploys to www.maximmakovskiy.com (the bare domain redirects there).
 Vercel settings: Framework **Vite**, build command `npm run build`, output directory `dist`.
 
 Any static host works the same way — upload the contents of `dist/`.
