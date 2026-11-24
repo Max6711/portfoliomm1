@@ -71,6 +71,12 @@
       "person": {
         "name": "Maxim Makovskiy",
         "initials": "MM",
+        "photo": {
+          "src": "/images/avatar.jpg",
+          "alt": "Portrait of Maxim Makovskiy",
+          "width": 184,
+          "height": 184
+        },
         "headline": "Integration & AI Solutions Engineer",
         "headlineSuffix": "Full-Stack",
         "oneLiner": "I design, build and run production systems end to end: connecting platforms through APIs, putting AI workflows into real use, and keeping Linux and cloud infrastructure running.",

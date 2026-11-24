@@ -119,7 +119,14 @@ function hero(t, site) {
   return `<section class="hero" id="top" aria-labelledby="hero-name">
   <div class="container">
     <p class="badge"><span class="badge__dot" aria-hidden="true"></span>${esc(p.badge)}</p>
-    <h1 class="hero__name" id="hero-name">${esc(p.name)}</h1>
+    <div class="hero__id">
+      ${
+        p.photo
+          ? `<img class="avatar" src="${esc(p.photo.src)}" alt="${esc(p.photo.alt)}" width="${p.photo.width}" height="${p.photo.height}" decoding="async">`
+          : ''
+      }
+      <h1 class="hero__name" id="hero-name">${esc(p.name)}</h1>
+    </div>
     <p class="hero__headline">${esc(p.headline)} <span class="hero__sep" aria-hidden="true">|</span> <span class="hero__suffix">${esc(p.headlineSuffix)}</span></p>
     <p class="hero__lead">${esc(p.oneLiner)}</p>
     <div class="hero__actions">
@@ -399,7 +406,7 @@ function head(t, site) {
     jobTitle: p.headline,
     url,
     email: `mailto:${p.email}`,
-    image: og,
+    image: p.photo ? site.url.replace(/\/$/, '') + p.photo.src : og,
     address: { '@type': 'PostalAddress', addressLocality: p.location.split(',')[0].trim(), addressCountry: 'IL' },
     knowsLanguage: p.languages.map((l) => l.name),
     sameAs: [p.linkedin, p.github],

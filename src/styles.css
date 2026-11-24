@@ -482,8 +482,24 @@ button {
   box-shadow: 0 0 0 4px var(--accent-soft);
 }
 
-.hero__name {
+.hero__id {
+  display: flex;
+  align-items: center;
+  gap: clamp(14px, 2.4vw, 28px);
   margin-block-start: 24px;
+}
+.avatar {
+  flex: none;
+  width: clamp(64px, 9vw, 96px);
+  height: clamp(64px, 9vw, 96px);
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--surface-2);
+  box-shadow:
+    0 0 0 3px var(--bg),
+    0 0 0 5px var(--accent);
+}
+.hero__name {
   font-size: clamp(42px, 8.4vw, 92px);
   font-weight: 700;
   line-height: 1;
