@@ -118,21 +118,23 @@ function hero(t, site) {
   const p = t.person;
   return `<section class="hero" id="top" aria-labelledby="hero-name">
   <div class="container">
-    <p class="badge"><span class="badge__dot" aria-hidden="true"></span>${esc(p.badge)}</p>
-    <div class="hero__id">
+    <div class="hero__top${p.photo ? ' has-photo' : ''}">
+      <div class="hero__text">
+        <p class="badge"><span class="badge__dot" aria-hidden="true"></span>${esc(p.badge)}</p>
+        <h1 class="hero__name" id="hero-name">${esc(p.name)}</h1>
+        <p class="hero__headline">${esc(p.headline)} <span class="hero__sep" aria-hidden="true">|</span> <span class="hero__suffix">${esc(p.headlineSuffix)}</span></p>
+        <p class="hero__lead">${esc(p.oneLiner)}</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="${esc(site.cv)}" download>${icon('download')}${esc(t.ui.downloadCv)}</a>
+          <a class="btn btn--secondary" href="${esc(p.linkedin)}" ${ext}>${icon('linkedin')}${esc(t.ui.linkedin)}</a>
+          <a class="btn btn--ghost" href="#contact">${icon('mail')}${esc(t.ui.contact)}</a>
+        </div>
+      </div>
       ${
         p.photo
-          ? `<img class="avatar" src="${esc(p.photo.src)}" alt="${esc(p.photo.alt)}" width="${p.photo.width}" height="${p.photo.height}" decoding="async">`
+          ? `<figure class="hero__photo"><img src="${esc(p.photo.src)}" alt="${esc(p.photo.alt)}" width="${p.photo.width}" height="${p.photo.height}" fetchpriority="high"></figure>`
           : ''
       }
-      <h1 class="hero__name" id="hero-name">${esc(p.name)}</h1>
-    </div>
-    <p class="hero__headline">${esc(p.headline)} <span class="hero__sep" aria-hidden="true">|</span> <span class="hero__suffix">${esc(p.headlineSuffix)}</span></p>
-    <p class="hero__lead">${esc(p.oneLiner)}</p>
-    <div class="hero__actions">
-      <a class="btn btn--primary" href="${esc(site.cv)}" download>${icon('download')}${esc(t.ui.downloadCv)}</a>
-      <a class="btn btn--secondary" href="${esc(p.linkedin)}" ${ext}>${icon('linkedin')}${esc(t.ui.linkedin)}</a>
-      <a class="btn btn--ghost" href="#contact">${icon('mail')}${esc(t.ui.contact)}</a>
     </div>
     <dl class="hero__meta">
       <div class="hero__meta-roles">

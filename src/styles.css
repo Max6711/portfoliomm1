@@ -482,24 +482,50 @@ button {
   box-shadow: 0 0 0 4px var(--accent-soft);
 }
 
-.hero__id {
-  display: flex;
-  align-items: center;
-  gap: clamp(14px, 2.4vw, 28px);
-  margin-block-start: 24px;
+.hero__top {
+  display: grid;
+  gap: 28px;
 }
-.avatar {
-  flex: none;
-  width: clamp(64px, 9vw, 96px);
-  height: clamp(64px, 9vw, 96px);
-  border-radius: 50%;
+@media (min-width: 860px) {
+  .hero__top.has-photo {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 56px;
+    align-items: center;
+  }
+}
+.hero__photo {
+  position: relative;
+  width: clamp(150px, 40vw, 260px);
+  aspect-ratio: 4 / 5;
+}
+@media (max-width: 859px) {
+  /* photo first on phones, but after the name in reading order */
+  .hero__photo {
+    order: -1;
+  }
+}
+.hero__photo::before {
+  /* offset accent frame */
+  content: '';
+  position: absolute;
+  inset: 12px -12px -12px 12px;
+  border: 1.5px solid var(--accent-line);
+  border-radius: 20px;
+}
+[dir='rtl'] .hero__photo::before {
+  inset: 12px 12px -12px -12px;
+}
+.hero__photo img {
+  position: relative;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  border-radius: 20px;
   background: var(--surface-2);
-  box-shadow:
-    0 0 0 3px var(--bg),
-    0 0 0 5px var(--accent);
+  box-shadow: var(--shadow);
 }
 .hero__name {
+  margin-block-start: 24px;
   font-size: clamp(42px, 8.4vw, 92px);
   font-weight: 700;
   line-height: 1;

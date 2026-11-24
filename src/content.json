@@ -72,10 +72,10 @@
         "name": "Maxim Makovskiy",
         "initials": "MM",
         "photo": {
-          "src": "/images/avatar.jpg",
+          "src": "/images/portrait.jpg",
           "alt": "Portrait of Maxim Makovskiy",
-          "width": 184,
-          "height": 184
+          "width": 320,
+          "height": 400
         },
         "headline": "Integration & AI Solutions Engineer",
         "headlineSuffix": "Full-Stack",
