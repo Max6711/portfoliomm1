@@ -1,0 +1,321 @@
+{
+  "site": {
+    "url": "https://maximmakovskiy.com",
+    "cv": "/Maxim_Makovskiy_CV.pdf",
+    "ogImage": "/og.png",
+    "defaultLocale": "en"
+  },
+  "locales": {
+    "en": {
+      "lang": "en",
+      "dir": "ltr",
+      "meta": {
+        "title": "Maxim Makovskiy — Integration & AI Solutions Engineer",
+        "description": "Maxim Makovskiy — Integration & AI Solutions Engineer and full-stack developer in Israel. I design, build and run production systems end to end: API integrations, AI workflows, Linux and cloud infrastructure."
+      },
+      "ui": {
+        "skip": "Skip to content",
+        "nav": {
+          "work": "Work",
+          "experience": "Experience",
+          "skills": "Skills",
+          "contact": "Contact"
+        },
+        "menuOpen": "Open menu",
+        "menuClose": "Close menu",
+        "themeToggle": "Toggle light / dark theme",
+        "downloadCv": "Download CV",
+        "linkedin": "LinkedIn",
+        "contact": "Contact",
+        "targeting": "Roles I'm targeting",
+        "level": "Level",
+        "location": "Location",
+        "languages": "Languages",
+        "work": {
+          "eyebrow": "Featured projects",
+          "title": "Live systems with real users"
+        },
+        "caseStudy": "Read the case study",
+        "caseStudyHide": "Hide the case study",
+        "visit": "Visit",
+        "loginNote": "Login required",
+        "diagramTitle": "Architecture",
+        "experience": {
+          "eyebrow": "Experience",
+          "title": "Where I've built and run systems"
+        },
+        "skills": {
+          "eyebrow": "Skills",
+          "title": "What I work with"
+        },
+        "principles": {
+          "eyebrow": "How I work",
+          "title": "Three habits I bring to every project"
+        },
+        "education": {
+          "eyebrow": "Education",
+          "title": "Education"
+        },
+        "contactSection": {
+          "eyebrow": "Contact",
+          "title": "Let's talk",
+          "text": "Hiring for an implementation, integration or AI solutions role — or need a system built? Email is the fastest way to reach me."
+        },
+        "email": "Email",
+        "phone": "Phone",
+        "github": "GitHub",
+        "copy": "Copy",
+        "copied": "Copied",
+        "backToTop": "Back to top"
+      },
+      "person": {
+        "name": "Maxim Makovskiy",
+        "initials": "MM",
+        "headline": "Integration & AI Solutions Engineer",
+        "headlineSuffix": "Full-Stack",
+        "oneLiner": "I design, build and run production systems end to end: connecting platforms through APIs, putting AI workflows into real use, and keeping Linux and cloud infrastructure running.",
+        "badge": "Open to Implementation / Integration / AI Solutions roles in Israel",
+        "roles": [
+          "Implementation Engineer",
+          "Integration Engineer",
+          "AI Solutions Engineer",
+          "Solutions Engineer",
+          "Junior DevOps / Cloud"
+        ],
+        "level": "Junior–Mid",
+        "location": "Netanya, Israel",
+        "languages": [
+          { "name": "Hebrew", "level": "native-level" },
+          { "name": "English", "level": "professional" },
+          { "name": "Russian", "level": "native" },
+          { "name": "Ukrainian", "level": "native" }
+        ],
+        "story": "I immigrated to Israel at 16, served as a lone soldier in an IDF Technology Unit, and taught myself engineering by shipping real products. What I'm best at is end-to-end ownership: taking requirements from non-technical stakeholders, designing the architecture, building, launching and supporting it.",
+        "email": "maximmakovskiy1@gmail.com",
+        "phone": "+972584088196",
+        "phoneDisplay": "+972-58-408-8196",
+        "linkedin": "https://www.linkedin.com/in/maxim-makovskiy",
+        "linkedinLabel": "linkedin.com/in/maxim-makovskiy",
+        "github": "https://github.com/max6711",
+        "githubLabel": "github.com/max6711"
+      },
+      "proof": [
+        { "value": "~50", "label": "active users in 2 months", "source": "Bartali platform" },
+        { "value": "250+", "label": "platform users", "source": "Finvibe" },
+        { "value": "−40%", "label": "manual work via automation", "source": "IDF" },
+        { "value": "3+ yrs", "label": "building production systems", "source": "" }
+      ],
+      "projects": [
+        {
+          "id": "bartali",
+          "title": "Instructor Training Platform",
+          "org": "Bartali Youth Movement",
+          "period": "2026 – present",
+          "status": "Live",
+          "url": "https://guide.bartali.org.il",
+          "urlLabel": "guide.bartali.org.il",
+          "loginRequired": true,
+          "summary": "A production knowledge platform for the organization's instructors, designed, built and launched from scratch. Adopted by ~50 instructors within two months of launch.",
+          "metric": { "value": "~50", "label": "instructors in 2 months" },
+          "tags": ["Python", "FastAPI", "SQLite", "PostgreSQL + RLS", "JavaScript", "PWA", "Hebrew RTL"],
+          "media": {
+            "light": "/images/projects/bartali-login-light.jpg",
+            "dark": "/images/projects/bartali-login-dark.jpg",
+            "width": 1000,
+            "height": 625,
+            "alt": "Sign-in screen of the Bartali instructor training platform",
+            "caption": "Sign-in screen. The platform itself is behind a login."
+          },
+          "diagram": "bartali",
+          "open": true,
+          "sections": [
+            {
+              "heading": "Problem",
+              "text": "Instructors searched for training materials across scattered documents and had to download files to read them."
+            },
+            {
+              "heading": "What I built",
+              "text": "A searchable, mobile-first knowledge platform that brings all training materials into one place, each item linked to its source document."
+            },
+            {
+              "heading": "Features",
+              "list": [
+                "Searchable library: Library, Safety and Quality Control sections",
+                "Cmd+K search across all content",
+                "Every item linked to its source document",
+                "In-app issue reporting",
+                "Multiple content editors and authenticated users",
+                "Mobile-first installable web app (PWA), Hebrew RTL"
+              ]
+            },
+            {
+              "heading": "Architecture",
+              "list": [
+                "Python / FastAPI backend with SQLite",
+                "PostgreSQL knowledge base with row-level security (RLS) access rules, KB schema and catalog",
+                "Content pipeline that feeds the knowledge base",
+                "Frontend in plain HTML, CSS and JavaScript"
+              ]
+            },
+            {
+              "heading": "Roadmap — v2.0 (planned / in progress)",
+              "list": [
+                "Offline access",
+                "News feed",
+                "In-platform document forwarding with notifications",
+                "AI-generated training sessions built from the library",
+                "Repair-request workflow for the bike mechanic"
+              ]
+            },
+            {
+              "heading": "My role",
+              "text": "Sole engineer, working directly with management and instructors. I also own the organization's digital services: the WordPress website (bartali.org.il), email newsletters and the SaaS tools staff use daily."
+            }
+          ]
+        },
+        {
+          "id": "storely",
+          "title": "Storely",
+          "org": "AI customer-support platform",
+          "period": "2024 – present",
+          "status": "Live",
+          "url": "https://askstorely.com",
+          "urlLabel": "askstorely.com",
+          "loginRequired": false,
+          "summary": "An AI customer-support platform that connects Shopify, Instagram and WhatsApp, and answers customers with AI workflows that hand off to human agents when needed.",
+          "metric": null,
+          "tags": ["OpenAI API", "Shopify API", "WhatsApp API", "Instagram API", "REST", "OAuth", "Webhooks"],
+          "media": null,
+          "diagram": null,
+          "open": false,
+          "sections": [
+            {
+              "heading": "Integrations",
+              "text": "Connects Shopify, Instagram and WhatsApp through REST APIs, OAuth and webhooks."
+            },
+            {
+              "heading": "AI workflows",
+              "list": [
+                "Order and inventory inquiries answered with the OpenAI API",
+                "Customer verification",
+                "Handoff to human support agents"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "finvibe",
+          "title": "Finvibe",
+          "org": "Investment platform",
+          "period": "2023 – 2025",
+          "status": "",
+          "url": "",
+          "urlLabel": "",
+          "loginRequired": false,
+          "summary": "Sole developer of an end-to-end investment platform for 250+ users, including 25 active investors, with payment processing.",
+          "metric": { "value": "250+", "label": "users · 25 active investors" },
+          "tags": ["Python", "Telegram Bot", "Payments", "Analytics", "Admin dashboard"],
+          "media": null,
+          "diagram": null,
+          "open": false,
+          "sections": [
+            {
+              "heading": "What I built",
+              "list": [
+                "End-to-end investment platform with payment processing",
+                "Python Telegram bot that automated support and transaction coordination",
+                "Investor analytics and an admin dashboard for platform operations"
+              ]
+            },
+            {
+              "heading": "My role",
+              "text": "Sole developer, responsible for the platform from build to day-to-day operation."
+            }
+          ]
+        }
+      ],
+      "experience": [
+        {
+          "role": "IT Operations Specialist",
+          "org": "Bartali – Youth in Movement",
+          "period": "2026 – present",
+          "points": [
+            "Built and run the instructor training platform (~50 users in 2 months)",
+            "Own the WordPress website, email newsletters and the SaaS tools staff use daily"
+          ]
+        },
+        {
+          "role": "Independent Full-Stack Developer, AI Integration",
+          "org": "Storely",
+          "period": "2024 – present",
+          "points": [
+            "AI customer-support platform integrating Shopify, Instagram and WhatsApp via REST APIs, OAuth and webhooks"
+          ]
+        },
+        {
+          "role": "Full-Stack Developer",
+          "org": "Finvibe",
+          "period": "2023 – 2025",
+          "points": [
+            "Sole developer of an investment platform for 250+ users with payment processing and a Telegram support bot"
+          ]
+        },
+        {
+          "role": "Systems Technician",
+          "org": "IDF Technology Unit",
+          "period": "2022 – 2025",
+          "points": [
+            "Administered Linux servers in AWS and Azure as part of a 12-person team",
+            "Automated routine tasks with Python, PowerShell and JavaScript (−40% manual work)",
+            "Implemented Grafana monitoring",
+            "Managed SQL databases supporting 500+ users"
+          ]
+        }
+      ],
+      "skills": [
+        {
+          "group": "Integrations & AI",
+          "items": ["REST APIs", "Webhooks", "OAuth", "OpenAI API", "Shopify / WhatsApp / Instagram APIs", "Telegram bots"]
+        },
+        {
+          "group": "Backend & Data",
+          "items": ["Python", "FastAPI", "Node.js", "Express", "PostgreSQL (RLS)", "SQLite", "SQL", "Firestore"]
+        },
+        {
+          "group": "Frontend",
+          "items": ["JavaScript", "React", "Next.js", "HTML", "CSS", "Tailwind CSS", "PWA"]
+        },
+        {
+          "group": "Infrastructure",
+          "items": ["Linux", "AWS", "Azure", "Docker", "Grafana", "Bash", "PowerShell"]
+        }
+      ],
+      "principles": [
+        {
+          "title": "Start from the user's problem",
+          "text": "Requirements usually come from non-technical people. I start with what they actually need, then choose the architecture and tools."
+        },
+        {
+          "title": "Ship small, then iterate with real feedback",
+          "text": "Get a working core into people's hands early, then improve it based on how it's really used."
+        },
+        {
+          "title": "Own it after launch",
+          "text": "Support, monitoring and fixes are part of the job. I stay responsible for the systems I ship."
+        }
+      ],
+      "education": [
+        { "title": "Full-Stack Web Development", "place": "Professional IT School", "period": "2023 – 2024" },
+        { "title": "Python Programming Course", "place": "", "period": "2024" },
+        { "title": "High School Diploma", "place": "Software Engineering major (5 units)", "period": "2019 – 2022" }
+      ],
+      "freelance": {
+        "title": "Freelance",
+        "text": "Available for selected freelance projects: internal tools, integrations, AI automations for businesses.",
+        "button": "Discuss a project",
+        "subject": "Freelance project"
+      },
+      "footer": "Designed and built by Maxim Makovskiy"
+    }
+  }
+}
