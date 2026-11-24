@@ -482,47 +482,48 @@ button {
   box-shadow: 0 0 0 4px var(--accent-soft);
 }
 
-.hero__top {
-  display: grid;
-  gap: 28px;
+/* Identity block: photo + name (+ headline beside it on wider screens) */
+.hero__id {
+  margin-block-start: 24px;
 }
-@media (min-width: 860px) {
-  .hero__top.has-photo {
-    grid-template-columns: minmax(0, 1fr) auto;
-    gap: 56px;
-    align-items: center;
+.hero__id.has-photo {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-areas:
+    'photo name'
+    'head  head';
+  column-gap: 18px;
+  align-items: center;
+}
+@media (min-width: 760px) {
+  .hero__id.has-photo {
+    grid-template-areas:
+      'photo name'
+      'photo head';
+    column-gap: 32px;
+    align-items: end;
+  }
+  .hero__id.has-photo .hero__headline {
+    align-self: start;
   }
 }
 .hero__photo {
-  position: relative;
-  width: clamp(150px, 40vw, 260px);
-  aspect-ratio: 4 / 5;
-}
-@media (max-width: 859px) {
-  /* photo first on phones, but after the name in reading order */
-  .hero__photo {
-    order: -1;
-  }
-}
-.hero__photo::before {
-  /* offset accent frame */
-  content: '';
-  position: absolute;
-  inset: 12px -12px -12px 12px;
-  border: 1.5px solid var(--accent-line);
-  border-radius: 20px;
-}
-[dir='rtl'] .hero__photo::before {
-  inset: 12px 12px -12px -12px;
-}
-.hero__photo img {
-  position: relative;
-  width: 100%;
-  height: 100%;
+  grid-area: photo;
+  width: clamp(92px, 22vw, 148px);
+  height: auto;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 20px;
+  object-position: 50% 0; /* head to shoulders */
+  border-radius: 14px;
   background: var(--surface-2);
-  box-shadow: var(--shadow);
+  border: 1px solid var(--line);
+}
+.hero__id.has-photo .hero__name {
+  grid-area: name;
+  margin-block-start: 0;
+}
+.hero__id.has-photo .hero__headline {
+  grid-area: head;
 }
 .hero__name {
   margin-block-start: 24px;
@@ -545,6 +546,14 @@ button {
 }
 .hero__suffix {
   color: var(--accent);
+}
+@media (max-width: 559px) {
+  .hero__sep {
+    display: none;
+  }
+  .hero__suffix {
+    display: block;
+  }
 }
 .hero__lead {
   max-width: 700px;
